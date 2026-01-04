@@ -1,121 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Next Level Loading Animation</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Tech With Dasun Store</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Particle Background -->
-    <div class="particles-container">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-    </div>
 
-    <!-- Theme Selector -->
-    <div class="theme-selector">
-        <button class="theme-btn active" data-theme="neon">Neon</button>
-        <button class="theme-btn" data-theme="cyber">Cyber</button>
-        <button class="theme-btn" data-theme="cosmic">Cosmic</button>
-        <button class="theme-btn" data-theme="minimal">Minimal</button>
-    </div>
+<!-- BACKGROUND SECTION -->
+<!-- Currently using Matrix Rain background -->
+<div class="background">
+  <div class="matrix-rain" id="matrixRain"></div>
+</div>
+<div class="background-overlay"></div>
 
-    <div class="container">
-        <div class="loading-container">
-            <!-- Advanced Morphing Spinner -->
-            <div class="morphing-spinner">
-                <div class="spinner-core"></div>
-                <div class="spinner-ring ring-1"></div>
-                <div class="spinner-ring ring-2"></div>
-                <div class="spinner-ring ring-3"></div>
-                <div class="spinner-ring ring-4"></div>
-            </div>
-            
-            <!-- Floating Elements -->
-            <div class="floating-elements">
-                <div class="float-element element-1"></div>
-                <div class="float-element element-2"></div>
-                <div class="float-element element-3"></div>
-                <div class="float-element element-4"></div>
-            </div>
-            
-            <!-- Advanced Dots with Trail Effect -->
-            <div class="dots-container">
-                <div class="dot-trail">
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                </div>
-            </div>
-            
-            <!-- Animated Loading Text -->
-            <div class="loading-text">
-                <span class="loading-word">Loading</span>
-                <span class="loading-dots">...</span>
-            </div>
-            
-            <!-- Advanced Progress Bar -->
-            <div class="progress-container">
-                <div class="progress-track">
-                    <div class="progress-bar">
-                        <div class="progress-glow"></div>
-                    </div>
-                    <div class="progress-percentage">0%</div>
-                </div>
-            </div>
+<!-- Admin Login Button (Always visible) -->
+<div class="admin-login-btn" id="adminLoginBtn" onclick="toggleAdminLogin()">
+  <i class="fas fa-lock"></i>
+</div>
 
-            <!-- Loading Stats -->
-            <div class="loading-stats">
-                <div class="stat">
-                    <span class="stat-label">Memory</span>
-                    <div class="stat-bar">
-                        <div class="stat-fill" data-stat="memory"></div>
-                    </div>
-                </div>
-                <div class="stat">
-                    <span class="stat-label">CPU</span>
-                    <div class="stat-bar">
-                        <div class="stat-fill" data-stat="cpu"></div>
-                    </div>
-                </div>
-                <div class="stat">
-                    <span class="stat-label">Network</span>
-                    <div class="stat-bar">
-                        <div class="stat-fill" data-stat="network"></div>
-                    </div>
-                </div>
-            </div>
+<!-- Edit Mode Indicator -->
+<div class="edit-mode-indicator" id="editModeIndicator">
+  <i class="fas fa-edit"></i> EDIT MODE
+</div>
+
+<header>
+  <div class="header-bar">
+    <h1 class="logo">Tech With Dasun Store</h1>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </div>
+  <nav id="menu">
+    <a onclick="openPage('bots')">Free WP Bots</a>
+    <a onclick="openPage('earn')">E Money Earn</a>
+    <a onclick="openPage('store')">Store</a>
+    <a onclick="openPage('about')">About</a>
+    <a onclick="openPage('vehicle')">Vehicle Service</a>
+    <a onclick="openPage('downloader')">Downloader</a>
+  </nav>
+</header>
+
+<main>
+<section id="bots" class="page active">
+<h2>Free WP MINI Bot</h2>
+<p class="dassa1">Developed by Programmer Dassa</p>
+<div class="slide">
+<img src="https://files.catbox.moe/gl1kqs.jpg">
+</div>
+<p class="freebot1">
+Deploy this WhatsApp bot FREE.<br>
+Just link the code to your WhatsApp.
+</p>
+<div class="steps">
+<p class="botdeplostep">Bot Deploy Steps</p>
+<h3>Sinhala</h3>
+<p class="sinhalastep">
+✓ Website එකට එන්න<br>
+✓ Free Bot Page<br>
+✓ Connect Button<br>
+✓ Number Submit<br>
+✓ Code Copy → WhatsApp Link Device
+</p>
+<h3>English</h3>
+<p class="inglishstep">
+✓ Visit Website<br>
+✓ Free Bot Page<br>
+✓ Connect Bot<br>
+✓ Submit Number<br>
+✓ Copy Code → WhatsApp Link Device
+</p>
+</div>
+<div class="player">
+<div class="title">PLAY SONG</div>
+<div class="sub">by Hector</div>
+<button class="btn-audio" onclick="toggleAudio()">
+<i id="icon" class="fas fa-play"></i>
+</button>
+<div class="time" id="time">0:00</div>
+<audio id="audio" src="https://files.catbox.moe/tvw1kz.mp3"></audio>
+</div>
+</section>
+
+<section id="earn" class="page"><h2>E Money Earn</h2></section>
+
+<section id="store" class="page">
+  <div class="store-container">
+    <h2>Our Services Store</h2>
+    <p class="store-description">Explore our premium tech services. Click on any service to view details.</p>
+    
+    <!-- Login Form (Initially hidden) -->
+    <div class="login-form" id="adminLoginForm" style="display: none;">
+      <h3 class="login-title">Admin Login</h3>
+      <div class="form-group">
+        <label for="adminPassword">Password:</label>
+        <input type="password" id="adminPassword" placeholder="Enter admin password" autocomplete="off">
+      </div>
+      <div class="form-buttons">
+        <button type="button" class="btn btn-warning" onclick="adminLogin()">
+          <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+        <button type="button" class="btn btn-secondary" onclick="closeAdminLogin()">
+          <i class="fas fa-times"></i> Cancel
+        </button>
+      </div>
+      
+      <!-- BUY PASSWORD BUTTON SECTION -->
+      <div class="buy-password-container">
+        <div class="buy-password-title">
+          <i class="fas fa-key"></i> Want Admin Access?
         </div>
-        
-        <!-- Content that appears after loading -->
-        <div class="content hidden">
-            <div class="success-animation">
-                <div class="checkmark">
-                    <div class="checkmark-circle"></div>
-                    <div class="checkmark-stem"></div>
-                    <div class="checkmark-kick"></div>
-                </div>
-            </div>
-            <h1>Welcome to the Future!</h1>
-            <p>Your advanced loading experience is complete.</p>
-            <div class="action-buttons">
-                <button onclick="showLoading()" class="btn btn-primary">Reload Animation</button>
-                <button onclick="toggleSound()" class="btn btn-secondary">Toggle Sound</button>
-                <button onclick="changeSpeed()" class="btn btn-tertiary">Change Speed</button>
-            </div>
-        </div>
+        <button class="buy-password-btn" onclick="buyPassword()">
+          <i class="fab fa-whatsapp"></i> Buy Password
+        </button>
+        <p class="buy-password-description">
+          Contact us on WhatsApp to purchase the admin password and get full access to manage your services!
+        </p>
+      </div>
+      
+      <p style="margin-top: 15px; color: #a0e7ff; font-size: 14px;">
+        <i class="fas fa-info-circle"></i> Only you can access the admin panel.
+      </p>
     </div>
     
+    <!-- Admin Panel (Only visible when logged in) -->
+    <div class="admin-panel" id="adminPanel">
+      <h3 class="admin-title">Admin Panel</h3>
+      <div class="admin-form">
+        <form id="serviceForm">
+          <div class="form-group">
+            <label for="serviceName">Service Name:</label>
+            <input type="text" id="serviceName" placeholder="e.g., WhatsApp Bot Development" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="serviceIcon">Icon Class (FontAwesome):</label>
+            <input type="text" id="serviceIcon" placeholder="e.g., fas fa-robot" value="fas fa-robot">
+            <small style="color: #a0e7ff;">Get icons from <a href="https://fontawesome.com/icons" target="_blank" style="color: #00ffcc;">FontAwesome</a></small>
+          </div>
+          
+          <div class="form-group">
+            <label for="serviceDescription">Description:</label>
+            <textarea id="serviceDescription" placeholder="Describe your service..." required></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label for="servicePrice">Price (LKR):</label>
+            <input type="text" id="servicePrice" placeholder="e.g., 5,000" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="serviceColor">Accent Color:</label>
+            <select id="serviceColor">
+              <option value="#00ffcc">Cyan</option>
+              <option value="#ffcc00">Yellow</option>
+              <option value="#ff3366">Pink</option>
+              <option value="#3366ff">Blue</option>
+              <option value="#33cc33">Green</option>
+              <option value="#ff9900">Orange</option>
+              <option value="#a78bfa">Purple</option>
+            </select>
+          </div>
+          
+          <div class="form-buttons">
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-save"></i> Add Service
+            </button>
+            <button type="button" class="btn btn-secondary" onclick="clearForm()">
+              <i class="fas fa-eraser"></i> Clear
+            </button>
+          </div>
+        </form>
+      </div>
+      
+      <div class="admin-controls">
+        <h4 style="color: #ffcc00; margin-bottom: 15px; text-align: center;">
+          <i class="fas fa-cogs"></i> Management Controls
+        </h4>
+        <div class="control-buttons">
+          <button type="button" class="btn btn-warning" onclick="resetToDefault()">
+            <i class="fas fa-redo"></i> Reset to Default
+          </button>
+          <button type="button" class="btn btn-danger" onclick="logoutAdmin()">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Service boxes grid -->
+    <div class="service-grid" id="serviceGrid">
+      <!-- Services will be loaded here -->
+    </div>
+  </div>
+</section>
+
+<section id="about" class="page"><h2>About</h2></section>
+<section id="vehicle" class="page"><h2>Vehicle Service</h2></section>
+<section id="downloader" class="page"><h2>Downloader</h2></section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
