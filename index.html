@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Level Loading Animation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div class="particles-container">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Theme Selector -->
+    <div class="theme-selector">
+        <button class="theme-btn active" data-theme="neon">Neon</button>
+        <button class="theme-btn" data-theme="cyber">Cyber</button>
+        <button class="theme-btn" data-theme="cosmic">Cosmic</button>
+        <button class="theme-btn" data-theme="minimal">Minimal</button>
+    </div>
+
+    <div class="container">
+        <div class="loading-container">
+            <!-- Advanced Morphing Spinner -->
+            <div class="morphing-spinner">
+                <div class="spinner-core"></div>
+                <div class="spinner-ring ring-1"></div>
+                <div class="spinner-ring ring-2"></div>
+                <div class="spinner-ring ring-3"></div>
+                <div class="spinner-ring ring-4"></div>
+            </div>
+            
+            <!-- Floating Elements -->
+            <div class="floating-elements">
+                <div class="float-element element-1"></div>
+                <div class="float-element element-2"></div>
+                <div class="float-element element-3"></div>
+                <div class="float-element element-4"></div>
+            </div>
+            
+            <!-- Advanced Dots with Trail Effect -->
+            <div class="dots-container">
+                <div class="dot-trail">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+            
+            <!-- Animated Loading Text -->
+            <div class="loading-text">
+                <span class="loading-word">Loading</span>
+                <span class="loading-dots">...</span>
+            </div>
+            
+            <!-- Advanced Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-track">
+                    <div class="progress-bar">
+                        <div class="progress-glow"></div>
+                    </div>
+                    <div class="progress-percentage">0%</div>
+                </div>
+            </div>
+
+            <!-- Loading Stats -->
+            <div class="loading-stats">
+                <div class="stat">
+                    <span class="stat-label">Memory</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" data-stat="memory"></div>
+                    </div>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">CPU</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" data-stat="cpu"></div>
+                    </div>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Network</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" data-stat="network"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Content that appears after loading -->
+        <div class="content hidden">
+            <div class="success-animation">
+                <div class="checkmark">
+                    <div class="checkmark-circle"></div>
+                    <div class="checkmark-stem"></div>
+                    <div class="checkmark-kick"></div>
+                </div>
+            </div>
+            <h1>Welcome to the Future!</h1>
+            <p>Your advanced loading experience is complete.</p>
+            <div class="action-buttons">
+                <button onclick="showLoading()" class="btn btn-primary">Reload Animation</button>
+                <button onclick="toggleSound()" class="btn btn-secondary">Toggle Sound</button>
+                <button onclick="changeSpeed()" class="btn btn-tertiary">Change Speed</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
